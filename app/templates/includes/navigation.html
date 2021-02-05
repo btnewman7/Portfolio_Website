@@ -14,11 +14,11 @@
             <li class="nav-item {% if active_page == 'main.about' %}active{% endif %}">
                 <a id="about" class="nav-link" href="{{ url_for('main.about')}}"><b>About</b></a>
             </li>
-            <li class="nav-item {% if active_page == 'main.contact' %}active{% endif %}">
-                <a id="contact" class="nav-link" href="{{ url_for('main.contact')}}"><b>Contact</b></a>
-            </li>
             <li class="nav-item {% if active_page == 'main.portfolio' %}active{% endif %}">
                 <a id="portfolio" class="nav-link" href="{{ url_for('main.portfolio')}}"><b>Portfolio</b></a>
+            </li>
+            <li class="nav-item {% if active_page == 'main.contact' %}active{% endif %}">
+                <a id="contact" class="nav-link" href="{{ url_for('main.contact')}}"><b>Contact</b></a>
             </li>
             <!-- <li class="nav-item {% if active_page == 'main.other' %}active{% endif %}">
                 <a id="other" class="nav-link" href="{{ url_for('main.other')}}"><b>Other</b></a>

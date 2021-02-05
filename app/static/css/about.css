@@ -4,8 +4,16 @@
 
 img {
     border-radius: 60%;
+    border-color: rgb(66, 182, 197);
 }
 
 #career {
     padding-left: 50px;
+}
+
+#aboutme {
+    text-align: center;
+    justify-content: center;
+    padding-top: 150px;
+    margin-left: 20px;
 }

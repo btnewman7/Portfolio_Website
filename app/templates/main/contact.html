@@ -6,11 +6,28 @@
 
 {% set active_page = "main.contact" %}
 
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/contact.css')}}">
+{% endblock%}
+
 {%  block content  %}
 <div class="jumbotron">
     <div class="container text-center">
       <h1><b>CONTACT</b></h1> 
       <p>"Call me, bleep me, if you want to reach me" - Kim Possible</p>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="content">
+      <p>Feel free to reach me my email or professional profiles listed below.</p>
+      <br>
+      <br>
+        <a href="mailto: btnewman7@gmail.com"><button type="button" class="btn btn-outline-info">Email</button></a>
+        <a href="https://www.linkedin.com/in/bennewm/"><button type="button" class="btn btn-outline-info">LinkedIn</button></a>
+        <a href="https://github.com/btnewman7"><button type="button" class="btn btn-outline-info">Github</button></a>
+      <br>
+      <br>
     </div>
 </div>
 {%  endblock  %}
