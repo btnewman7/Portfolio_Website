@@ -6,6 +6,56 @@
 
 {% set active_page = "main.portfolio" %}
 
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/portfolio.css')}}">
+{% endblock %}
+
 {%  block content  %}
-<h1> Portfolio </h1>
+<div class="jumbotron">
+    <div class="container text-center">
+      <h1><b>PORTFOLIO</b></h1> 
+      <p>"The nature of a portfolio is that it's always a work in progress"</p>
+    </div>
+</div>
+
+<div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary text-center">
+          <div class="panel-heading">
+            <h5><b>IMDB Revenue Data Analysis (1966 - 2015)</b></5></div>
+            <ul style="list-style: none; padding-left:0%;">
+                <li><b>Skills: </b>Python, Data Visualization, Data Cleansing</li>
+            </ul>
+          <div class="panel-body"><img src="{{url_for('static', filename='./images/director_revenue.png')}}" class="img-responsive rounded border" style="width:100%" alt="Image"></div>
+          <a href="https://github.com/btnewman7/IMDB_2015_Movie_Revenue_Analysis" class="button btn btn-info gradient-button rounded">Notebook</a>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-danger text-center">
+          <div class="panel-heading">
+              <h5><b>JHU COVID-19 Web Scraping Application</b></5></div>
+          <ul style="list-style: none; padding-left:0%;">
+            <li><b>Skills: </b>Flask, Python, HTML, CSS, BeautifulSoup4, Selenium, Jinja</li>
+        </ul>
+          <div class="panel-body"><img src="{{url_for('static', filename='./images/jhu_mortality_shot.png')}}" class="img-responsive border rounded" style="width:100%" alt="Image"></div>
+          <a href="https://github.com/btnewman7/CovidDataScraper" class="button btn btn-info rounded">Code</a>
+          <a href="https://jhu-data-scraper.herokuapp.com/" class="button btn btn-success rounded">Application</a>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-success text-center">
+          <div class="panel-heading">
+            <h5><b>Fuel Economy Analysis (2008 vs. 2018)</b></5></div>
+            <ul style="list-style: none; padding-left:0%;">
+                <li><b>Skills: </b>Python, Data Visualization, Data Cleansing</li>
+            </ul>
+          <div class="panel-body"><img src="{{url_for('static', filename='./images/mpg_displacement.png')}}" class="img-responsive border rounded" style="width:100%" alt="Image"></div>
+          <a href="https://github.com/btnewman7/Fuel_Economy_Analysis" class="button btn btn-info rounded">Notebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br>
 {%  endblock  %}

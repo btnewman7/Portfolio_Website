@@ -5,15 +5,40 @@
 {% endblock %}
 
 {% set active_page = "main.index" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css')}}">
+{% endblock %}
+
 
 {%  block content  %}
 
 
-    <div class="text-center">
-      <h1>Welcome to my Portfolio Site</h1>
-      <p class="lead">Explore to learn more about who I am and what I do</p>
-    </div>
-</body>
-
+      <div class="jumbotron">
+        <div class="container text-center">
+          <h1><b>WELCOME</b></h1> 
+          <p>I built this website to better showcase who I am and what I like to do. Please explore and feel free to reach out.</p>
+        </div>
+      </div>
+      <br>
+      <div class="container text-center">    
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="{{ url_for('main.about')}}"><img src="{{url_for('static', filename='./images/man-avatar-profile-round-icon_24640-14044.webp')}}" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p><b>Who am I</b></p>
+          </div>
+          <div class="col-sm-4"> 
+            <a href="{{ url_for('main.portfolio')}}"><img src="{{url_for('static', filename='./images/data_analysis.webp')}}" class="img-responsive portfolio-img" style="width:100%" alt="Avatar"></a>
+            <br>
+            <p><b>My Work</b></p>    
+          </div>
+          <div class="col-sm-4"> 
+            <a href="{{ url_for('main.contact')}}"><img src="{{url_for('static', filename='./images/email1.png')}}" class="img-responsive" style="width:100%" alt="Image"></a>
+            <br>
+            <p><b>Lets connect</b></p>    
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
 
 {%  endblock  %}
